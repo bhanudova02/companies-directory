@@ -11,7 +11,7 @@ function App() {
   const [companiesList, setCompaniesList] = useState([]);
 
   return (
-    <main className="h-screen flex flex-col">
+    <main className="h-[98vh] md:h-screen flex flex-col">
       {/* Fixed Header */}
       <header className="shrink-0">
         <Header />
@@ -22,11 +22,11 @@ function App() {
         <Route path="/" element={
           <div className="flex-1 flex flex-col overflow-hidden">
             <section className="px-3 md:px-4 pt-2 bg-zinc-700">
-              <FilterControls setCompaniesList={setCompaniesList}/>
+              <FilterControls setCompaniesList={setCompaniesList} />
             </section>
 
             <section className="flex-1 overflow-hidden px-3 md:px-4 py-2 bg-zinc-700">
-              <CompaniesTable companies_data={companiesList}/>
+              <CompaniesTable companies_data={companiesList} />
             </section>
           </div>
         } />

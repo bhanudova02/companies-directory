@@ -6,35 +6,35 @@ export function CompaniesTable({ companies_data }) {
     const [rowsPerPage, setRowsPerPage] = useState(15);
     const [currentPage, setCurrentPage] = useState(1);
 
-    // 🔁 Update when parent data changes
+    // Update when parent data changes
     useEffect(() => {
         setData(companies_data || []);
         setCurrentPage(1); // Reset to first page when new data arrives
     }, [companies_data]);
 
-    // 🔄 Reverse data order
+    //Reverse data order
     const handleSort = () => {
         setData((prev) => [...prev].reverse());
     };
 
-    // 🔢 Change number of rows per page
+    // Change number of rows per page
     const handleRowsChange = (e) => {
         setRowsPerPage(Number(e.target.value));
         setCurrentPage(1);
     };
 
-    // 📄 Pagination calculations
+    // Pagination calculations
     const totalPages = Math.ceil(data.length / rowsPerPage);
     const startIndex = (currentPage - 1) * rowsPerPage;
     const endIndex = startIndex + rowsPerPage;
     const displayedData = data.slice(startIndex, endIndex);
 
-    // ⬅️ Previous Page
+    // Previous Page
     const handlePrevPage = () => {
         if (currentPage > 1) setCurrentPage((prev) => prev - 1);
     };
 
-    // ➡️ Next Page
+    // Next Page
     const handleNextPage = () => {
         if (currentPage < totalPages) setCurrentPage((prev) => prev + 1);
     };
