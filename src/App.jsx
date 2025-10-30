@@ -5,8 +5,11 @@ import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 import About from "./pages/About";
 import { Contact } from "./pages/Contact";
+import { useState } from "react";
 
 function App() {
+  const [companiesList, setCompaniesList] = useState([]);
+
   return (
     <main className="h-screen flex flex-col">
       {/* Fixed Header */}
@@ -19,11 +22,11 @@ function App() {
         <Route path="/" element={
           <div className="flex-1 flex flex-col overflow-hidden">
             <section className="px-3 md:px-4 pt-2 bg-zinc-700">
-              <FilterControls />
+              <FilterControls setCompaniesList={setCompaniesList}/>
             </section>
 
             <section className="flex-1 overflow-hidden px-3 md:px-4 py-2 bg-zinc-700">
-              <CompaniesTable />
+              <CompaniesTable companies_data={companiesList}/>
             </section>
           </div>
         } />
@@ -32,10 +35,9 @@ function App() {
             <About />
           </div>
         } />
-
         <Route path="/contact" element={
           <div className="flex-1 overflow-auto px-3 md:px-4 py-2 bg-zinc-700">
-           <Contact/>
+            <Contact />
           </div>
         } />
       </Routes>
