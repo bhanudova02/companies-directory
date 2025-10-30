@@ -11,7 +11,7 @@ function App() {
   const [companiesList, setCompaniesList] = useState([]);
 
   return (
-    <main className="h-[98vh] md:h-screen flex flex-col">
+    <main className="h-[97vh] md:h-screen flex flex-col">
       {/* Fixed Header */}
       <header className="shrink-0">
         <Header />
