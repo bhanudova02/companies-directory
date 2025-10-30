@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+.mian_continer_style{
+  @apply flex-1 overflow-hidden px-3 md:px-4 py-2 bg-zinc-700 text-white
+}
