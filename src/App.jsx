@@ -12,11 +12,9 @@ function App() {
 
   return (
     <main className="h-[97vh] md:h-screen flex flex-col">
-      {/* Fixed Header */}
       <header className="shrink-0">
         <Header />
       </header>
-
 
       <Routes>
         <Route path="/" element={
@@ -42,7 +40,6 @@ function App() {
         } />
       </Routes>
 
-      {/* Fixed Footer */}
       <footer className="shrink-0">
         <Footer />
       </footer>

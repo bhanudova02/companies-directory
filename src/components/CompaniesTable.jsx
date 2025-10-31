@@ -58,10 +58,10 @@ export function CompaniesTable({ companies_data }) {
                                     key={index}
                                     className="border-b border-gray-100 hover:bg-gray-50 text-center text-[13.7px]"
                                 >
-                                    <td className="p-1.5">{company.name}</td>
-                                    <td>{company.industry}</td>
-                                    <td>{company.location}</td>
-                                    <td>
+                                    <td className="px-4 md:px-1.5 md:p-1.5 whitespace-nowrap">{company.name}</td>
+                                    <td className="px-4 md:px-1.5 md:p-1.5">{company.industry}</td>
+                                    <td className="px-4 md:px-1.5 md:p-1.5">{company.location}</td>
+                                    <td className="px-4 md:px-1.5 md:p-1.5">
                                         <a
                                             href={`https://${company.website}`}
                                             target="_blank"
