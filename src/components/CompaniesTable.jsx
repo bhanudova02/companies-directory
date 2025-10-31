@@ -56,7 +56,7 @@ export function CompaniesTable({ companies_data }) {
                             displayedData.map((company, index) => (
                                 <tr
                                     key={index}
-                                    className="border-b border-gray-100 hover:bg-gray-50 text-center text-[13.7px]"
+                                    className="border-b border-gray-100 hover:bg-gray-50 text-center text-[13.5px] md:text-[13.7px]"
                                 >
                                     <td className="px-4 md:px-1.5 md:p-1.5">{company.name}</td>
                                     <td className="px-4 md:px-1.5 md:p-1.5">{company.industry}</td>
